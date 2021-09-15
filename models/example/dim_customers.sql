@@ -1,4 +1,4 @@
-{{ config(materialized='table')}}
+{{ config(materialized='view')}}
 
 select a.id userid
 ,a.first_name
