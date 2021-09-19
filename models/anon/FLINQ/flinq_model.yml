@@ -1,0 +1,7 @@
+version: 2
+
+models:
+  - name: FLINQ_Reports
+    description: All components of the Automatic Payment Machine (APM) and their respective card balances
+  - name: Call_Summary
+    description: SRC table with FLINQ Call data
