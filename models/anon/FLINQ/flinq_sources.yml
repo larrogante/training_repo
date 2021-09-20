@@ -1,0 +1,18 @@
+version: 2
+
+sources:
+  - name: Datalake_FLINQ_NON_PI
+    project: "{{ 'scg-udp-lake' + target.name }}"
+    schema: FLINQ_NON_PI
+    loader: gcloud storage
+    tables:
+      - name: Reports
+        external:
+          location: 'gs://scg-udp-lake-parking-pi-dev/parking/privacy=non-pi/processed=no/source=flinq/tableName=Reports/*.avro'
+          options:
+            format: avro
+      - name: CallSummary
+        external:
+          location: 'gs://scg-udp-lake-parking-pi-dev/parking/privacy=non-pi/processed=no/source=flinq/tableName=CallSummary/*.avro'
+          options:
+            format: avro
