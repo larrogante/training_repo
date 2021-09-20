@@ -1,0 +1,1 @@
+{% set v_data_batch_id = get_batch_id() %}
