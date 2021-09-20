@@ -2,7 +2,7 @@ version: 2
 
 sources:
   - name: Datalake_FLINQ_NON_PI
-    project: "{{ 'scg-udp-lake' + target.name }}"
+    project: "{{ 'scg-udp-lake-' + target.name }}"
     schema: FLINQ_NON_PI
     loader: gcloud storage
     tables:
